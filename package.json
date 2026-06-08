@@ -1,0 +1,19 @@
+{
+  "name": "tu-cao-mvp2",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "node tools/local-demo-server.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test tests/generate-services.test.js",
+    "build:single": "vite build && node tools/build-single.mjs",
+    "build:standalone": "node tools/build-standalone.mjs",
+    "publish:backend": "node tools/build-standalone.mjs && node tools/publish-to-prompt-extraction.mjs"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

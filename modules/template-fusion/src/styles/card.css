@@ -1,0 +1,17 @@
+.result-card {
+  padding: 20px;
+}
+
+.result-stage {
+  overflow: hidden;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.88), rgba(245, 234, 224, 0.94)),
+    #f8efe7;
+  border: 1px solid rgba(44, 33, 22, 0.08);
+}
+
+.result-image {
+  min-height: 520px;
+  max-height: 880px;
+}

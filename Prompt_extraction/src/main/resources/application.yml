@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+spring:
+  application:
+    name: complaint-story-analyzer
+  datasource:
+    url: jdbc:h2:mem:complaint_story;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      mode: always
+
+complaint:
+  llm:
+    mock-enabled: ${LLM_MOCK_ENABLED:true}
+    api-key: ${MINIMAX_API_KEY:}
+    endpoint: ${MINIMAX_API_ENDPOINT:https://api.minimaxi.com/anthropic}
+    model: ${MINIMAX_MODEL:MiniMax-M2.7}
+    timeout-seconds: ${MINIMAX_TIMEOUT_SECONDS:30}
+  storage:
+    enabled: ${STORY_ANALYSIS_STORAGE_ENABLED:false}
